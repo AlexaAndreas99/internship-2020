@@ -1,1 +1,1 @@
-﻿# componenta privată - aplicația consultant service 
+﻿# consultant service - aplicația privată
