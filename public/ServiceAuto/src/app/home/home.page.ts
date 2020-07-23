@@ -22,6 +22,7 @@ export class HomePage implements OnInit {
     }
 
     try {
+      console.log(await this.sim.getSimInfo());
       this.phoneNo = (await this.sim.getSimInfo() as any).phoneNumber;
     } catch (e) {
       console.log(e);
