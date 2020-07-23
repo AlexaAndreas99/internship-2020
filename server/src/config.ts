@@ -3,8 +3,8 @@ export default {
   publicFolder: 'public',
   uploadsFolder: 'uploads',
   msg: {
-    uploadFail: 'Eroare la �nc?rcare fisiere @errors',
-    uploadSuccess: 'Fisierele XML s-au �nc?rcat cu success',
+    uploadFail: 'Eroare la încărcare fișiere @errors',
+    uploadSuccess: 'Fisierele XML s-au încărcat cu success',
   },
   db: {
     user: 'PdfAutomation',
