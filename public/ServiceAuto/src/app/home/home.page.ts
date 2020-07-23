@@ -13,26 +13,19 @@ export class HomePage implements OnInit {
   constructor(private sim: Sim) { }
 
   async ngOnInit() {
-    if (!await this.hasReadPermission()) {
+    if (!await this.sim.hasReadPermission()) {
       try {
-        await this.requestPermission();
+        await this.sim.requestReadPermission();
       } catch (e) {
         return;
       }
     }
 
     try {
-      this.phoneNo = (await this.getSimInfo() as any).phoneNumber;
+      this.phoneNo = (await this.sim.getSimInfo() as any).phoneNumber;
     } catch (e) {
       console.log(e);
     }
 
   }
-
-  getSimInfo = () => new Promise((res, rej) => this.sim.getSimInfo().then(res, rej));
-
-  hasReadPermission = () => new Promise((res, rej) => this.sim.hasReadPermission().then(res, rej));
-
-  requestPermission = () => new Promise((res, rej) => this.sim.requestReadPermission().then(res, rej));
-
 }
