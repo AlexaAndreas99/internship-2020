@@ -1,2 +1,2 @@
-﻿# componenta publică - aplicația client service 
+﻿# client service - aplicația publică 
 
